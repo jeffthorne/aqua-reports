@@ -1,11 +1,11 @@
 aqua_reports
 ====
 
-A custom use case reporting framework as a cli.
+A custom use case reporting framework as a cli.<br/>
 Auth defaults to external config file. Other auth plugins can be added if needed.
 
 Current Supported Reports
-1. Image Findings [formats: xlsx]
+* Image Findings [formats: xlsx]
 
 Project Status: Experimental
 
@@ -23,14 +23,14 @@ pip install .
 
 ## Examples
 
-1. Generate reports for all images in the Docker Hub registry:
+1. Generate reports for all images in the Docker Hub registry:<br/>
    aqua_reports -r 'Docker Hub'
 
-2. Generate reports for all images in the nginx repo:
+2. Generate reports for all images in the nginx repo:<br/>
    aqua_reports -r "Docker Hub" -i nginx
        
-3. Generate a report for a specific image:
+3. Generate a report for a specific image:<br/>
    aqua_reports -r "Docker Hub" -i nginx -t  latest
    
-4. Store generated report/s in reports subdirectory
+4. Store generated report/s in reports subdirectory<br/>
    aqua_reports  -r "AWS-ECR" -i concourse-pr -p ./reports
