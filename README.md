@@ -17,8 +17,8 @@ pip install .
 
 '--registry', '-r' TEXT This is the friendly name of the registry in Aqua CSP<br/>
 '--image', '-i' TEXT Optional container image found within specified registry<br/>
-'--tag', '-t' TEXT Optional image tag
-'--path', '-p' TEXT Path to store reports. Must exist. Defaults to current dir.
+'--tag', '-t' TEXT Optional image tag<br/>
+'--path', '-p' TEXT Path to store reports. Must exist. Defaults to current dir.<br/>
 '--config', '-c' TEXT Path to config file. Defaults to config.yaml in current dir.
 
 ## Examples
