@@ -19,7 +19,7 @@ pip install .
 '--image', '-i' TEXT Optional container image found within specified registry<br/>
 '--tag', '-t' TEXT Optional image tag
 '--path', '-p' TEXT Path to store reports. Must exist. Defaults to current dir.
-'--config', '-c' TEXT Path to config file.
+'--config', '-c' TEXT Path to config file. Defaults to config.yaml in current dir.
 
 ## Examples
 
