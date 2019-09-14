@@ -32,8 +32,8 @@ pip install .
 3. Generate a report for a specific image:<br/>
    aqua_reports -r "Docker Hub" -i nginx -t  latest
    
-4. Store generated report/s in reports subdirectory<br/>
+4. Store generated report/s in reports subdirectory:<br/>
    aqua_reports  -r "AWS-ECR" -i concourse-pr -p ./reports
 
-5. Custom config.yaml file location<br/>
+5. Custom config.yaml file location:<br/>
    aqua_reports  -r "AWS-ECR" -i concourse-pr -p ./reports -c ~/config.yaml
