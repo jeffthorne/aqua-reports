@@ -1,0 +1,7 @@
+username: username
+password: pasword
+aqua:
+  host: host
+  port: port
+  using_tls: True
+  verify_tls: False   #Only supports False right now
