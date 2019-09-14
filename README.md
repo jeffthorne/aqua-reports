@@ -34,3 +34,6 @@ pip install .
    
 4. Store generated report/s in reports subdirectory<br/>
    aqua_reports  -r "AWS-ECR" -i concourse-pr -p ./reports
+
+5. Custom config.yaml file location<br/>
+   aqua_reports  -r "AWS-ECR" -i concourse-pr -p ./reports -c ~/config.yaml
