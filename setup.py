@@ -7,7 +7,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'Click',
-        'aqua>-0.1.3',
+        'aqua == 0.1.6',
         'openpyxl',
         'PyYaml'
     ],

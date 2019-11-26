@@ -120,7 +120,7 @@ class ExcelReport:
 
     def _risk_sheet(self, workbook):
         risk_sheet = workbook.create_sheet(title="Risk")
-        risk_columns = ['Image', 'Tag', 'Registry', 'Compliant', 'Scan Date', 'Total Vulns', 'High', 'Medium', 'Low',
+        risk_columns = ['Image', 'Tag', 'Registry', 'Digest', 'Compliant', 'Scan Date', 'Total Vulns', 'Critical', 'High', 'Medium', 'Low',
                         'Negligible', 'Malware Count', 'Sensitive Data Count', 'Whitelisted', 'Blacklisted']
 
 
@@ -130,17 +130,19 @@ class ExcelReport:
         risk_sheet.cell(row, 1).value = self.image.name
         risk_sheet.cell(row, 2).value = self.image.tag
         risk_sheet.cell(row, 3).value = self.image.registry
-        risk_sheet.cell(row, 4).value = self.image.disallowed
-        risk_sheet.cell(row, 5).value = self.image.scan_date
-        risk_sheet.cell(row, 6).value = self.image.vulns_found
-        risk_sheet.cell(row, 7).value = self.image.high_vulns
-        risk_sheet.cell(row, 8).value = self.image.med_vulns
-        risk_sheet.cell(row, 9).value = self.image.low_vulns
-        risk_sheet.cell(row, 10).value = self.image.neg_vulns
-        risk_sheet.cell(row, 11).value = self.image.malware
-        risk_sheet.cell(row, 12).value = self.image.sensitive_data
-        risk_sheet.cell(row, 13).value = self.image.whitelisted
-        risk_sheet.cell(row, 14).value = self.image.blacklisted
+        risk_sheet.cell(row, 4).value = self.image.digest
+        risk_sheet.cell(row, 5).value = self.image.disallowed
+        risk_sheet.cell(row, 6).value = self.image.scan_date
+        risk_sheet.cell(row, 7).value = self.image.vulns_found
+        risk_sheet.cell(row, 8).value = self.image.crit_vulns
+        risk_sheet.cell(row, 9).value = self.image.high_vulns
+        risk_sheet.cell(row, 10).value = self.image.med_vulns
+        risk_sheet.cell(row, 11).value = self.image.low_vulns
+        risk_sheet.cell(row, 12).value = self.image.neg_vulns
+        risk_sheet.cell(row, 13).value = self.image.malware
+        risk_sheet.cell(row, 14).value = self.image.sensitive_data
+        risk_sheet.cell(row, 15).value = self.image.whitelisted
+        risk_sheet.cell(row, 16).value = self.image.blacklisted
 
         self.__bold_row(risk_sheet)
         self.__col_width(risk_sheet, 20)

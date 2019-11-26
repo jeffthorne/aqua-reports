@@ -9,3 +9,5 @@ __pycache__/
 venv/
 reports/
 config2.yaml
+build/
+dist/

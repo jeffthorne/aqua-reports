@@ -33,8 +33,8 @@ def cli(registry, path, config, image=None, tag='all'):
     """
     images = []
     config = get_config(config)
-    aqua = Aqua(id=config.username, password=config.password, host=config.host, port=config.port, using_ssl=config.using_tls, verify_tls=config.verify_tls)
-    images_resp = json.loads(aqua.list_registered_images(registry=registry, repository=image).content)
+    aqua = Aqua(id=config.username, password=config.password, host=config.host, port=config.port, using_tls=config.using_tls, verify_tls=config.verify_tls)
+    images_resp = aqua.list_registered_images(registry=registry, repository=image)
     reports_dir = Path(path)
     if not reports_dir.exists(): raise Exception("Invalid directory")
 
