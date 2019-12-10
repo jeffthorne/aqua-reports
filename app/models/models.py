@@ -19,7 +19,7 @@ class Image:
 
     def parse_sensitive_data(self) -> Dict:
         sd = self.aqua.list_image_sensitive_data(self.registry, self.name.split(':')[0], self.tag)
-        return sd
+        return sd['result']
 
 
     def parse_malware_findings(self) -> Dict:

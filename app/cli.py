@@ -14,7 +14,7 @@ from .config.config import get_config
 @click.option('--image', '-i', help='Optional container image found within specified registry')
 @click.option('--tag', '-t', default='all', help='Optional image tag')
 @click.option('--path', '-p', default=".", help="Path to store reports. Must exist. Default current dir.")
-@click.option('--config', '-c', default="./config.yaml", help="Path to config file")
+@click.option('--config', '-c', default='./config.yaml', help='Path to config file')
 def cli(registry, path, config, image=None, tag='all'):
     """This script will generate a findings report for a container image including vulnerabilities, malware, and sensitive
        data. Reports can be generated for all images: in a registry, in a repository, or belonging to a specific image tag.

@@ -11,3 +11,5 @@ reports/
 config2.yaml
 build/
 dist/
+*.xlsx
+aqua_reports.egg-info/
