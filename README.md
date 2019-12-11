@@ -7,7 +7,8 @@ Auth defaults to external config file. Other auth plugins can be added if needed
 Current Supported Reports
 * Image Findings [formats: xlsx]
 
-Project Status: Experimental
+Project Status: Experimental. 
+Note: Requires Python 3.6.8 or higher.
 
 ## Installation
 pip install .
